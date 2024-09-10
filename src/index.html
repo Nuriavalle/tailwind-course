@@ -67,26 +67,32 @@
             Usando Fuentes con Tailwind CSS
         </h1>
 
-        <!-- Párrafo con la clase font-open-sans -->
+        <!-- Párrafo con la clase font-open-sans con clases arbitrarias-->
         <p class="font-['Open_Sans'] text-lg text-gray-600 mb-4">
             Este texto utiliza la fuente <span class="font-semibold">Open Sans</span> gracias a la clase personalizada
             <code>font-open-sans</code>.
         </p>
 
-        <!-- Otro párrafo usando la clase font-suse -->
+        <!-- Otro párrafo usando la clase font-suse con clases arbitrarias -->
         <p class="font-['Roboto_Condensed'] text-lg text-gray-600 mb-4">
             Este texto utiliza la fuente <span class="font-semibold">Roboto Condensed</span> gracias a la clase
             personalizada <code>font-roboto</code>.
         </p>
 
-        <!-- Otro párrafo usando la clase Playwrite-CU -->
+        <!-- Otro párrafo usando la clase Playwrite-CU con clases arbitrarias -->
         <p class="font-['Playwrite_CU'] text-lg text-gray-600 mb-4">
             Este texto utiliza la fuente <span class="font-semibold">Playwrite CU</span> gracias a la clase
             personalizada <code>Playwrite-CU</code>.
         </p>
+
+        <!-- Otro párrafo usando la clase Poppins con importacion de CSS -->
+        <p class="poppins-semibold text-lg text-gray-600 mb-4">
+            Este texto utiliza la fuente <span class="font-semibold">Poppins-semibold</span> gracias a la clase
+            personalizada <code>poppins-semibold</code>.
+        </p>
     </div>
 
-    <!-- Usando flexbox -->
+    <!-- USANDO FLEXBOX -->
 
     <div class="bg-gray-100 p-10">
         <h1 class="text-2xl font-bold mb-4 text-center">Ejemplo Flexbox con Tailwind</h1>
@@ -120,7 +126,7 @@
         <div class="text-center bg-orange-500 p-4 m-2 border-solid border-4 border-gray-900">3</div>
     </div>
 
-    <!-- flex-wrap -->
+    <!-- FLEX WRAP -->
 
     <div class="bg-gray-100 p-10">
         <h1 class="text-2xl font-bold mb-4 text-center">Ejemplo Flexbox Wrap con Tailwind</h1>
@@ -133,7 +139,7 @@
         </div>
     </div>
 
-    <!-- Responsive design  -->
+    <!-- RESPONSIVE DESIGN  -->
     <!-- En el siguiente ejemplo puedes observa que en las pantallas mas pequeñas las tres cajas se mostraran en una sola columna, en las medida sm y md las tres cajas cubren cada una la mitad del contenedor y en las medidas superiores las tres cajas apareceran en una sola fila cubriendo un tercio del espacio del contenedor  -->
 
     <div>
@@ -155,7 +161,7 @@
 
     <!-- Cards -->
     <div
-        class="mt-6 flex flex-col justify-center mx-auto items-center w-1/4 shadow-xl border-4 border-blue-200 rounded-lg">
+        class="mt-6 flex flex-col justify-center mx-auto items-center w-full sm:w-full md:w-full lg:w-1/4 shadow-xl border-4 border-blue-200 rounded-lg">
         <img src="./images/descarga.jfif" alt=""
             class="align-center content-center justify-center rounded-full w-1/2 h-1/2 border-4 border-blue-200 m-4">
         <div class="p-4 justify-center items-center">
@@ -208,12 +214,57 @@
         Pantallas grandes (escritorios): A partir de 1024px, las cajas se muestran en 3 columnas. -->
 
 
+    <!-- HOVER EFFECTS AND TRANSITIONS: Este efecto es el que aparece cuando posicionamos el cursor por encima del objeto, puede ser cualquier objeto -->
 
+    <div class="bg-green-500 py-2 px-4 my-4 rounded-xl flex gap-4 items-center justify-center">
+        <button
+            class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-orange-500 py-2 px-4 hover:bg-orange-800 rounded-xl ">
+            Hellooooo
+        </button>
+        <button
+            class="transition ease-in-out delay-150 hover:-translate-x-1 hover:scale-110 duration-300 bg-violet-500 py-2 px-4 hover:bg-violet-800 rounded-xl ">
+            Hellooooo
+        </button>
+        <button class="bg-rose-500 py-2 px-4 hover:bg-rose-800 rounded-xl">
+            Hellooooo
+        </button>
+    </div>
 
+    <!-- RESPONSIVE NAVBAR -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">Mi Sitio</a>
 
+            <!-- Menú para pantallas grandes -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-white">Inicio</a></li>
+                <li><a href="#" class="text-white">Acerca de</a></li>
+                <li><a href="#" class="text-white">Servicios</a></li>
+                <li><a href="#" class="text-white">Contacto</a></li>
+            </ul>
 
+            <!-- Botón del menú para pantallas pequeñas -->
+            <button id="menu-button" class="block md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
 
-
+        <!-- Menú para pantallas pequeñas -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <ul class="flex flex-col space-y-4 mt-4">
+                <li><a href="#" class="text-white">Inicio</a></li>
+                <li><a href="#" class="text-white">Acerca de</a></li>
+                <li><a href="#" class="text-white">Servicios</a></li>
+                <li><a href="#" class="text-white">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <script src="./app.js"></script>
 </body>
 
 </html>
