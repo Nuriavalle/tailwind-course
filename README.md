@@ -1,6 +1,6 @@
 ## TAILWIND 
 
-![b5-new-logo](https://www.google.com/url?sa=i&url=https%3A%2F%2Findiehoy.com%2Fnoticias%2Fnicolas-cage-detesta-profundamente-los-memes-cara%2F&psig=AOvVaw1wB2tOPci1FDjavK6PwLMg&ust=1726082032465000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiq_eSKuYgDFQAAAAAdAAAAABAE)
+![b5-new-logo](https://picperf.io/https://laravelnews.s3.amazonaws.com/images/tailwindcss.png)
 
 ## COLORES Y FUENTES DE LETRA
 Tailwind CSS ofrece una amplia gama de **colores predefinidos** que puedes aplicar directamente a tus elementos HTML usando clases como `bg-blue-500` (fondo azul) o `text-red-600` (texto rojo). También proporciona clases para cambiar las **fuentes de letra**, como `font-sans`, `font-serif`, o `font-mono`.
