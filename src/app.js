@@ -1,13 +1,34 @@
 // Seleccionamos los elementos
-const menuButton = document.getElementById('menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
+const dropdownButton = document.getElementById('dropdownButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
 
 // Agregamos un evento al botón para alternar la visibilidad del menú
-menuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');  // Alterna la clase 'hidden'  
+dropdownButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
 });
 
-function toggleAccordion(section) {
-    const content = document.getElementById(`accordion-content-${section}`);
-    content.classList.toggle('hidden');
+// Cierra el menú si haces clic fuera de él
+document.addEventListener('click', (e) => {
+    if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add('hidden');
+    }
+});
+
+const darkMode = () => {
+    document.documentElement.classList.toggle("dark")
+    if (document.documentElement.classList.contains("dark")){
+        localStorage.setItem("theme", "dark")
+    }else{
+        localStorage.setItem("theme", "light")
+    }
 }
+
+if  (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark")
+}else{
+    document.documentElement.classList.remove("dark")
+}
+
+const btnDarkmode = document.getElementById("btn-darkmode")
+
+btnDarkmode.addEventListener("click", darkMode)
