@@ -23,12 +23,14 @@ const darkMode = () => {
     }
 }
 
+// Colocando el onclick
 if  (localStorage.getItem("theme") === "dark") {
     document.documentElement.classList.add("dark")
 }else{
     document.documentElement.classList.remove("dark")
 }
 
+// Usando Id de HTML
 const btnDarkmode = document.getElementById("btn-darkmode")
 
 btnDarkmode.addEventListener("click", darkMode)
