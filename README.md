@@ -35,14 +35,9 @@ Tailwind facilita el **diseño responsivo** utilizando prefijos como `sm:`, `md:
 
 - *https://tailwindcss.com/docs/responsive-design*
 
-## TAILWIND COMPONENTS
 
-**Tailwind Components** son combinaciones de clases predefinidas que crean elementos comunes de interfaz de usuario como botones, formularios, modales, y más. Puedes crear tus propios componentes reutilizables con Tailwind o usar bibliotecas como Tailwind UI.
 
-## Cards
-Una **Card** es un contenedor de contenido que puede incluir texto, imágenes, botones, etc. En Tailwind, puedes crear una card usando clases como `bg-white`, `shadow-lg`, `p-4` para estructura, y luego añadir componentes dentro.
 
-- *https://v1.tailwindcss.com/components/cards*
 
 ## GRID LAYOUT
 Tailwind incluye clases para crear **grid layouts** con CSS Grid. Puedes usar `grid`, `grid-cols-2` (dos columnas) o `gap-4` para añadir espacio entre las filas y columnas del grid.
@@ -54,8 +49,50 @@ Para aplicar **efectos de hover**, Tailwind ofrece clases como `hover:bg-blue-50
 
 - *https://tailwindcss.com/docs/hover-focus-and-other-states*
 
+## TAILWIND COMPONENTS
+
+**Tailwind Components** son combinaciones de clases predefinidas que crean elementos comunes de interfaz de usuario como botones, formularios, modales, y más. Puedes crear tus propios componentes reutilizables con Tailwind o usar bibliotecas como Tailwind UI.
+
+## Cards
+Una **Card** es un contenedor de contenido que puede incluir texto, imágenes, botones, etc. En Tailwind, puedes crear una card usando clases como `bg-white`, `shadow-lg`, `p-4` para estructura, y luego añadir componentes dentro.
+
+- *https://v1.tailwindcss.com/components/cards*
+
 ## RESPONSIVE NAVBAR
 Puedes crear un **navbar responsivo** fácilmente con Tailwind usando clases como `flex`, `items-center`, y aplicando los prefijos de diseño responsivo (`md:`, `lg:`) para modificar el diseño en diferentes tamaños de pantalla. Puedes también esconder o mostrar menús con clases como `hidden` y `block` dependiendo del tamaño de la pantalla.
 
 - *https://v1.tailwindcss.com/course/making-the-navbar-responsive*
+
+## Accordion
+Un Accordion es un contenedor que permite expandir o contraer secciones de contenido. En Tailwind, puedes crear un accordion usando clases como bg-gray-100, border, p-4 para la estructura, y luego añadir elementos como encabezados y contenido dentro de cada sección.
+
+## Dropdown
+Un Dropdown es un menú desplegable que muestra opciones adicionales cuando se activa. En Tailwind, puedes construir un dropdown usando clases como bg-white, shadow-md, p-2, y añadir un botón o enlace que despliegue el contenido cuando se interactúa con él.
+
+## Gallery
+Una Gallery es una disposición de imágenes o elementos visuales organizados en una cuadrícula. En Tailwind, puedes crear una galería usando clases como grid, gap-4, md:grid-cols-3 para una estructura responsiva, y luego insertar imágenes u otros contenidos visuales dentro de las celdas.
+
+- *https://tailblocks.cc/*
+
+## Price Table
+Una Price Table es un componente que presenta diferentes planes de precios o características comparativas. En Tailwind, puedes crear una tabla de precios usando clases como bg-gray-50, shadow-lg, p-6, text-center para dar formato a cada columna de precios, y luego agregar detalles como títulos, precios y listas de características.
+
+- *https://tailblocks.cc/*
+
+## Footer
+Un Footer es la sección final de una página web que generalmente incluye enlaces, información de contacto, y otros detalles importantes. En Tailwind, puedes construir un footer usando clases como bg-gray-800, text-white, p-4 para la estructura y estilo, y luego añadir enlaces de navegación, íconos sociales o textos informativos.
+
+- *https://tailblocks.cc/*
+
+## Forms
+Un Form es un conjunto de campos que permite a los usuarios ingresar información para interactuar con la página web. En Tailwind, puedes diseñar un formulario usando clases como bg-white, p-6, space-y-4 para estructurar los campos, y luego añadir inputs, selectores, y botones estilizados con clases como border, rounded, px-4, py-2.
+
+- *https://tailblocks.cc/*
+
+
+
+
+
+
+
 

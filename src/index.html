@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Tailwind CSS</title>
 </head>
 
@@ -339,6 +340,37 @@
             </div>
         </div>
 
+        <!-- Dropdown -->
+        <div class="relative inline-block text-left">
+            <div>
+                <button id="dropdownButton"
+                    class="inline-flex w-full justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-600">
+                    Options
+                    <svg class="-mr-1 ml-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownMenu"
+                class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                <div class="py-1" role="none">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account settings</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">License</a>
+                    <form method="POST" action="#">
+                        <button type="submit"
+                            class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100">Sign
+                            out</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <!-- Forms -->
         <form
             class="mt-6 flex flex-col justify-center mx-auto items-center w-full sm:w-full md:w-full lg:w-1/4 shadow-xl border-4 border-blue-200 rounded-lg">
@@ -380,11 +412,30 @@
     </div>
 
     <!-- Price table -->
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
+    <!-- Dark mode -->
+    <!-- darmode usando JavaScript en HTML -->
+    <!-- <button onclick="darkMode()" class="bg-blue-800 py-4 px-4 hover:bg-blue-500 rounded-lg text-white font-bold">Dark mode</button> -->
+
+    <!-- Dark mode usando eventos con JavaScript -->
+    
+
+    <section class="text-gray-600 body-font dark:bg-gray-700">
+        <div class="container px-5 py-2">
             <div class="flex flex-col text-center w-full mb-20">
-                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Pricing</h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Banh mi cornhole echo park skateboard authentic
+                
+                <div class="flex items-center justify-around mt-6">
+                    <div></div>
+                    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900 dark:text-gray-300">
+                        Pricing
+                    </h1>
+                    <button id="btn-darkmode"
+                        class="bg-blue-800 py-2 px-4 hover:bg-blue-500 rounded-lg text-white font-bold text-2xl"><i
+                            class="fa-regular fa-moon"></i>
+                    </button>
+                </div>
+                
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base dark:text-gray-300">Banh mi cornhole echo park
+                    skateboard authentic
                     crucifix neutra tilde lyft biodiesel artisan direct trade mumblecore 3 wolf moon twee</p>
             </div>
             <div class="lg:w-2/3 w-full mx-auto overflow-auto">
@@ -392,56 +443,74 @@
                     <thead>
                         <tr>
                             <th
-                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100 rounded-tl rounded-bl">
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100 rounded-tl rounded-bl dark:bg-blue-800 dark:text-white">
                                 Plan</th>
                             <th
-                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100">
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100 dark:bg-blue-800 dark:text-white">
                                 Speed</th>
                             <th
-                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100 dark:bg-slate-800 dark:text-white">
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100 dark:bg-blue-800 dark:text-white">
                                 Storage</th>
                             <th
-                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100">
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100 dark:bg-blue-800 dark:text-white">
                                 Price</th>
                             <th
-                                class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100 rounded-tr rounded-br">
+                                class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-blue-100 rounded-tr rounded-br dark:bg-blue-800 dark:text-white">
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="px-4 py-3">Start</td>
-                            <td class="px-4 py-3">5 Mb/s</td>
-                            <td class="px-4 py-3">15 GB</td>
-                            <td class="px-4 py-3 text-lg text-gray-900">Free</td>
-                            <td class="w-10 text-center">
+                            <td class="px-4 py-3 dark:bg-slate-500 dark:text-white">Start</td>
+                            <td class="px-4 py-3 dark:bg-slate-500 dark:text-white">5 Mb/s</td>
+                            <td class="px-4 py-3 dark:bg-slate-500 dark:text-white">15 GB</td>
+                            <td class="px-4 py-3 text-lg text-gray-900 dark:bg-slate-500 dark:text-white">Free</td>
+                            <td class="w-10 text-center dark:bg-slate-500 dark:text-white">
                                 <input name="plan" type="radio">
                             </td>
                         </tr>
                         <tr>
-                            <td class="border-t-2 border-gray-200 px-4 py-3">Pro</td>
-                            <td class="border-t-2 border-gray-200 px-4 py-3">25 Mb/s</td>
-                            <td class="border-t-2 border-gray-200 px-4 py-3">25 GB</td>
-                            <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
-                            <td class="border-t-2 border-gray-200 w-10 text-center">
+                            <td class="border-t-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">Pro</td>
+                            <td class="border-t-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">25 Mb/s
+                            </td>
+                            <td class="border-t-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">25 GB
+                            </td>
+                            <td
+                                class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900 dark:bg-slate-500 dark:text-white">
+                                $24</td>
+                            <td class="border-t-2 border-gray-200 w-10 text-center dark:bg-slate-500 dark:text-white">
                                 <input name="plan" type="radio">
                             </td>
                         </tr>
                         <tr>
-                            <td class="border-t-2 border-gray-200 px-4 py-3">Business</td>
-                            <td class="border-t-2 border-gray-200 px-4 py-3">36 Mb/s</td>
-                            <td class="border-t-2 border-gray-200 px-4 py-3">40 GB</td>
-                            <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$50</td>
-                            <td class="border-t-2 border-gray-200 w-10 text-center">
+                            <td class="border-t-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">Business
+                            </td>
+                            <td class="border-t-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">36 Mb/s
+                            </td>
+                            <td class="border-t-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">40 GB
+                            </td>
+                            <td
+                                class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900 dark:bg-slate-500 dark:text-white">
+                                $50</td>
+                            <td class="border-t-2 border-gray-200 w-10 text-center dark:bg-slate-500 dark:text-white">
                                 <input name="plan" type="radio">
                             </td>
                         </tr>
                         <tr>
-                            <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Exclusive</td>
-                            <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">48 Mb/s</td>
-                            <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">120 GB</td>
-                            <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$72</td>
-                            <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+                            <td
+                                class="border-t-2 border-b-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">
+                                Exclusive</td>
+                            <td
+                                class="border-t-2 border-b-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">
+                                48 Mb/s</td>
+                            <td
+                                class="border-t-2 border-b-2 border-gray-200 px-4 py-3 dark:bg-slate-500 dark:text-white">
+                                120 GB</td>
+                            <td
+                                class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900 dark:bg-slate-500 dark:text-white">
+                                $72</td>
+                            <td
+                                class="border-t-2 border-b-2 border-gray-200 w-10 text-center dark:bg-slate-500 dark:text-white">
                                 <input name="plan" type="radio">
                             </td>
                         </tr>
@@ -449,14 +518,14 @@
                 </table>
             </div>
             <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-                <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <a class="text-indigo-500 dark:text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0">Learn More
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                     </svg>
                 </a>
                 <button
-                    class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+                    class="flex ml-auto text-white bg-indigo-500 dark:bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 dark:font-bold rounded">Button</button>
             </div>
         </div>
     </section>
@@ -507,50 +576,6 @@
             </span>
         </div>
     </div>
-
-    <!-- Dropdown -->
-    <div class="relative inline-block text-left">
-        <div>
-            <button id="dropdownButton"
-                class="inline-flex w-full justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-600">
-                Options
-                <svg class="-mr-1 ml-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clip-rule="evenodd" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Dropdown menu -->
-        <div id="dropdownMenu"
-            class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-            <div class="py-1" role="none">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account settings</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">License</a>
-                <form method="POST" action="#">
-                    <button type="submit"
-                        class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100">Sign
-                        out</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Dark mode -->
-    <!-- darmode usando JavaScript en HTML -->
-    <!-- <button onclick="darkMode()" class="bg-blue-800 py-4 px-4 hover:bg-blue-500 rounded-lg text-white font-bold">Dark mode
-
-    </button> -->
-
-    <!-- Dark mode usando eventos con JavaScript -->
-    <button id="btn-darkmode" class="bg-blue-800 py-4 px-4 hover:bg-blue-500 rounded-lg text-white font-bold">Dark mode
-
-    </button>
-
 
 
 
